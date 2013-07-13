@@ -2,20 +2,9 @@ var express = require('express');
 
 var app = express.createServer(express.logger());
 
-//var text = fs.readFileSync('index.html','utf8');
-//console.log(text);
-
-// var data;
-//data = (fs.readFileSync('index.html', encoding String);
-//console.log(data)
-// console.log(fs.readFileSync('index.html', encoding String));
-// console.log(len + " bytes: " + buf1.toString('utf8', 0, len));
-
-// var buf =  new Buffer(fs.readFileSync('index.html'));
-// str =  buf.toString();
-
 var buf = new Buffer(256);
-var len = buf.write("Hello", "utf-8");
+var text = fs.readFileSync('index.html','utf8');
+var len = buf.write(text, "utf-8");
 var str = buf.toString("utf-8",0, len);
 console.log(len + " bytes: " + str);
 
