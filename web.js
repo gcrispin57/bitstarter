@@ -19,7 +19,7 @@ var text = fs.readFileSync('index.html','utf8');
 //console.log(len + " bytes: " + buf.toString('utf8', 0, len));
 
 app.get('/', function(request, response) {
-  response.send(text);
+  response.send(new Buffer('woof');
 });
 
 var port = process.env.PORT || 5000;
