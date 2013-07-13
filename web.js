@@ -23,7 +23,7 @@ console.log(len + " bytes: " + str);
 //console.log(buffer);
 
 app.get('/', function(request, response) {
-  response.send('help me');
+  response.send(str);
 });
 
 var port = process.env.PORT || 5000;
