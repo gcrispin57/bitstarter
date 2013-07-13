@@ -2,7 +2,7 @@ var express = require('express');
 
 var app = express.createServer(express.logger());
 
-// var text = fs.readFileSync('index.html','utf8');
+var text = fs.readFileSync('index.html','utf8');
 //console.log(text);
 
 // var data;
@@ -19,7 +19,7 @@ var app = express.createServer(express.logger());
 //console.log(len + " bytes: " + buf.toString('utf8', 0, len));
 
 app.get('/', function(request, response) {
-  response.send(new Buffer('woof');
+  response.send(new Buffer('woof'));
 });
 
 var port = process.env.PORT || 5000;
