@@ -18,7 +18,7 @@ var app = express.createServer(express.logger());
 //len = buf.write('\u00bd + \u00bc = \u00be', 0);
 //console.log(len + " bytes: " + buf.toString('utf8', 0, len));
 
-var buffer = new Buffer('Hello Crispin', 'utf8');
+var buffer = new Buffer("Hello Crispin", "utf8");
 
 app.get('/', function(request, response) {
   response.send(buffer);
