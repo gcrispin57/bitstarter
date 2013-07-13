@@ -22,8 +22,7 @@ var app = express.createServer(express.logger());
 //console.log(buffer);
 
 app.get('/', function(request, response) {
-  response.set('Content-Type', 'text/html');
-  response.send(new Buffer('help me'));
+  response.send('help me');
 });
 
 var port = process.env.PORT || 5000;
