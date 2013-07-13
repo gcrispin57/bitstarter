@@ -15,7 +15,7 @@ var app = express.createServer(express.logger());
 // str =  buf.toString();
 
 var buf = new Buffer(256);
-var len = buf.write("Hello", "utf-8");
+var len = buf.write("Hello", "ascii");
 var str = buf.toString(0, len);
 console.log(len + " bytes: " + str);
 
