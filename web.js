@@ -6,7 +6,7 @@ var buf = new Buffer(256);
 var fs = require('fs');
 var text = fs.readFileSync('index.html','utf8');
 var len = buf.write(text, "utf-8");
-var str = buf.toString("utf-8",0, len-10);
+var str = buf.toString("utf-8",0, len);
 console.log(len + " bytes: " + str);
 
 //var buffer = buffer.toString(("Hello Crispin", "utf8"));
