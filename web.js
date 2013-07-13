@@ -18,8 +18,10 @@ var app = express.createServer(express.logger());
 //len = buf.write('\u00bd + \u00bc = \u00be', 0);
 //console.log(len + " bytes: " + buf.toString('utf8', 0, len));
 
+var buffer = new Buffer('Hello Crispin', 'utf8');
+
 app.get('/', function(request, response) {
-  response.send(fs.readFileSync('index.html','utf8'));
+  response.send(buffer);
 });
 
 var port = process.env.PORT || 5000;
